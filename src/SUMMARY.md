@@ -1,5 +1,7 @@
 # Summary
 
+- [この資料について](./about.md)
+
 - [JavaScript01](./js01/readme.md)
 
   - [変数](./js01/variables.md)

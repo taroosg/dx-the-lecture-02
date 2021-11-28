@@ -18,14 +18,17 @@ jobs:
           mdbook-version: "0.4.8"
           # mdbook-version: 'latest'
 
+      # mdファイルのビルド
       - run: mdbook build
 
+      # サンプルファイルをzip圧縮してビルドしたファイル群に追加
       - run: |
           mkdir ./book/samples
           cd samples
           find . \! -name '*.zip' -type d -exec zip -r {}.zip {} \;
           mv *.zip ../book/samples
 
+      # ビルドされたファイル群をgh-pagesブランチにデプロイ
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
