@@ -3,7 +3,8 @@ name: github pages
 on:
   push:
     branches:
-      - main
+      # 🔽 発火タイミングを各クラスのmainブランチを指定
+      - class01-main
   pull_request:
 
 jobs:
@@ -31,7 +32,11 @@ jobs:
       # ビルドされたファイル群をgh-pagesブランチにデプロイ
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        # 🔽 ソースを各クラスのmainブランチを指定
+        if: github.ref == 'refs/heads/class01-main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
+          publish_dir:
+            ./book
+            # 🔽 デプロイ先を各クラスのdeployブランチを指定
+          publish_branch: class01-deploy
