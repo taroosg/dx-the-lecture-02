@@ -10,7 +10,7 @@
 
   - [配列](./js02/array.md)
   - [繰り返し](./js02/for.md)
-  - [クイズアプリケーション実装](./js0/quiz.md)
+  - [クイズアプリケーション実装](./js02/quiz.md)
 
 - [PHP01](./php01/readme.md)
 
