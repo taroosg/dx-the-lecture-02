@@ -2,4 +2,4 @@
 
 ## サンプルコード
 
-[download](../../samples/js02.zip)
+[download](../samples/js02.zip)

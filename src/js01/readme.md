@@ -4,4 +4,4 @@
 
 ワンクリックでサンプルコードの zip ファイルをダウンロード！
 
-[download](../../samples/js01.zip)
+[download](../samples/js01.zip)
